@@ -12,12 +12,12 @@ Especially, two sections of the unit configuration file is important.
 
 * ```ExecStart``` in ```[Service]```
 
-It tells systemd what script should be run when the service gets enabled.
+	It tells systemd what script should be run when the service gets enabled.
 
-Format: ```ExecStart=YourShellPath YourScriptPath```
+	Format: ```ExecStart=YourShellPath YourScriptPath```
 
 * ```WantedBy``` in ```[Install]```
 
-It limits the conditions that the service is allowed to start.
+	It limits the conditions that the service is allowed to start.
 
-Format: ```WantedBy=TargetName```
+	Format: ```WantedBy=TargetName```
