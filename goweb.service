@@ -1,0 +1,21 @@
+[Unit]
+
+Description=The Demo Service of a tiny Go server
+
+                                                                                                                                      
+
+[Service]
+
+Type=oneshot
+
+ExecStart=/bin/bash /home/jerry/apps/systemd-go-web/goweb.sh
+
+StandardOutput=syslog
+
+StandardError=inherit
+
+ 
+
+[Install]
+
+WantedBy=multi-user.target
