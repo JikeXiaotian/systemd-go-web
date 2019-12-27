@@ -24,4 +24,9 @@ I think two sections of the unit config are worth specially introducing here.
 
 After creating ```goweb.service```, it's time to activate it!
 
-Run ```sudo systemctl enable goweb``` in the shell. If everything goes well, it should stay in a blocking.
+Run ```$ sudo systemctl enable goweb``` in the shell, and there should be output: 
+
+```Created symlink /etc/systemd/system/multi-user.target.wants/goweb.service → /usr/lib/systemd/system/goweb.service.```. 
+
+### Start the Service
+Run ```$ sudo systemctl start goweb```. If everything goes well, it should stay in a blocking, and you should be able to see a webpage showing "Hello, world!" on localhost:9090.
