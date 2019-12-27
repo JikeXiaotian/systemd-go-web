@@ -8,7 +8,7 @@ As an example here, I am going to create a systemd service of a tiny Go server t
 ### Create a service unit file
 Create a file called *goweb.service* in /usr/lib/systemd/system/ (the file in my case can be found [here](https://github.com/JikeXiaotian/systemd-go-web/blob/master/goweb.service)).
 
-Especially, two sections of the unit configuration file is important.
+I think two sections of the unit config are worth specially introducing here.
 
 * ```ExecStart``` in ```[Service]```
 
@@ -21,3 +21,7 @@ Especially, two sections of the unit configuration file is important.
 	It limits the conditions that the service is allowed to start.
 
 	Format: ```WantedBy=TargetName```
+
+After creating ```goweb.service```, it's time to activate it!
+
+Run ```sudo systemctl enable goweb``` in the shell. If everything goes well, it should stay in a blocking.
