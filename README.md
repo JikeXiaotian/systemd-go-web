@@ -10,6 +10,14 @@ Create a file called *goweb.service* in /usr/lib/systemd/system/ (the file in my
 
 Especially, two sections of the unit configuration file is important.
 
-The first one is ```ExecStart``` in ```[Service]``` part. It tells systemd that what script should be run when the service gets enabled.
+* ```ExecStart``` in ```[Service]```
+
+It tells systemd what script should be run when the service gets enabled.
 
 Format: ```ExecStart=YourShellPath YourScriptPath```
+
+* ```WantedBy``` in ```[Install]```
+
+It limits the conditions that the service is allowed to start.
+
+Format: ```WantedBy=TargetName```
