@@ -14,7 +14,7 @@ StandardOutput=syslog
 
 StandardError=inherit
 
- 
+Restart=on-failure 
 
 [Install]
 

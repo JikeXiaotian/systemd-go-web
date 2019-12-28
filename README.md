@@ -38,7 +38,14 @@ Run ```$ sudo systemctl enable goweb``` in the shell, and there should be output
 ### Start the Service
 Run ```$ sudo systemctl start goweb```.
 
+In this case, systemctl will run ```/home/jerry/apps/systemd-go-web/goweb.sh``` as I set. And that script will start the go server.
+
+
 If everything goes well, it should stay in a blocking, and you should be able to see a webpage showing "Hello, world!" on localhost:9090.
 
 ### Check the status of the service
 ```systemctl status goweb```
+
+The Result of this Project:
+
+![Result](https://raw.githubusercontent.com/JikeXiaotian/Image-Storage/master/systemd-go-web/browser-screenshot.png)
